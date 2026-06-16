@@ -12,7 +12,7 @@ export default function Main() {
   const { view, setView } = useContext(ViewContext);
 
   useEffect(() => {
-    fetch('/feed.json')
+    fetch(`${import.meta.env.BASE_URL}feed.json`)
       .then(response => response.json())
       .then(data => setFeed(data));
   }, []);
