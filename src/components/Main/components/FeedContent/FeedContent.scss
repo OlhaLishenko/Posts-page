@@ -1,0 +1,27 @@
+@use '@/shared/styles/main.scss' as *;
+
+.feedContent {
+  display: flex;
+  flex-direction: row;
+
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: end;
+    grid-column: 1/-1;
+
+    @include onTablet {
+      align-items: start;
+    }
+
+    &--grid {
+      grid-column: span 1;
+    }
+
+    &__title {
+      @include FontStyles($size: 16px);
+    }
+  }
+}

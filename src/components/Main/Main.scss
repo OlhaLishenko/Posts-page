@@ -1,0 +1,46 @@
+@use '@/shared/styles/main.scss' as *;
+
+.main {
+  @include ContentPaddingInline;
+  z-index: 2;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 869px;
+    margin: auto;
+    align-items: center;
+    padding-bottom: 60px;
+  }
+
+  &__btn-controls {
+    display: flex;
+    flex-direction: row;
+    gap: 21px;
+    margin-top: 18px;
+    margin-bottom: 23px;
+    justify-content: end;
+    width: 100%;
+  }
+
+  &__btn {
+
+    &-icon {
+      color: $btn-disabled;
+
+      &--active {
+        color: $color-blue;
+      }
+    }
+  }
+
+  &__btn-bottom {
+    width: fit-content;
+    border: 1px solid $grey;
+    color: $grey;
+    margin-top: 30px;
+    padding: 8px 26px;
+    border-radius: 16px;
+  }
+}

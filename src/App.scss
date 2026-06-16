@@ -1,1 +1,78 @@
-// not empty
+@use './shared/styles/main' as *;
+@use './fonts/fonts';
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+iframe {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 420px;
+  min-height: 100vh;
+}
+
+a {
+  img {
+    &:hover {
+      transform: scale(110%);
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.app {
+  background-color: $main-bg;
+  position: relative;
+
+  &__bg {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &--main {
+      right: 0;
+      bottom: 40px;
+      top: auto;
+      left: auto;
+      z-index: 1;
+    }
+  }
+
+  &__bg-image {
+    width: 100%;
+  }
+}

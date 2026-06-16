@@ -1,6 +1,6 @@
 {
-  "name": "react_phone-catalog",
-  "homepage": "react_phone-catalog",
+  "name": "Posts-page",
+  "homepage": "Posts-page",
   "version": "0.1.0",
   "keywords": [],
   "author": "Mate Academy",
@@ -10,6 +10,7 @@
     "bulma": "^1.0.1",
     "classnames": "^2.5.1",
     "react": "^18.3.1",
+    "react-datepicker": "^9.1.0",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "react-transition-group": "^4.4.5"
@@ -43,7 +44,8 @@
     "sass": "^1.77.8",
     "stylelint": "^16.7.0",
     "typescript": "^5.2.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-plugin-svgr": "^5.2.0"
   },
   "scripts": {
     "start": "mate-scripts start -l",
@@ -70,14 +72,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "mateAcademy": {
-    "_comment": "Replace 'reactTypescript' with 'react' if you want use React without Typescript",
-    "projectType": "reactTypescript",
-    "nodejsMajorVersion": "20",
-    "tests": {
-      "_comment": "Add `cypressComponents: true` to enable component tests",
-      "cypress": true
-    }
   }
 }

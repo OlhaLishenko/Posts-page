@@ -1,0 +1,97 @@
+@use '@/shared/styles/main.scss' as *;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 4px 24px 0 $shadow-black, inset 0 12px 24px 0 $shadow-black;
+  background-color: $color-light-opacity;
+  padding-block: 33px;
+  justify-content: center;
+  position: relative;
+  padding-inline: 20px;
+  justify-content: space-evenly;
+
+  &__calendar {
+    z-index: 3;
+  }
+
+  @include onTablet {
+    padding-inline: auto;
+    gap: 86px;
+    justify-content: center;
+  }
+
+  &__logo-container {
+    @include LogoSizing();
+    display: flex;
+  }
+
+  &__logo {
+    object-fit: contain;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+
+      @include onTablet {
+        flex-direction: row;
+      }
+
+      &-text {
+        font-weight: 500;
+        font-size: 24px;
+        letter-spacing: -0.01em;
+        color: $color-black;
+      }
+
+
+      &-btn {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 13px;
+        letter-spacing: -0.03em;
+        color: $color-blue;
+        padding-inline: 12px;
+        padding-block: 6px;
+        border: 2px solid $color-blue;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-end;
+
+    @include onTablet {
+      flex-direction: row;
+      gap: 28px;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      font-family: 'Roboto';
+      font-size: 14px;
+      color: #000;
+
+      &--value {
+        font-weight: 700;
+      }
+
+      &--label {
+        font-weight: 400;
+      }
+    }
+  }
+}

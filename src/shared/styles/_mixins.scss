@@ -1,0 +1,39 @@
+@use './_variables' as *;
+
+@mixin onTablet {
+  @media(min-width: $min-tablet-screen) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media(min-width: $min-desktop-screen) {
+    @content;
+  }
+}
+
+@mixin LogoSizing() {
+  width: 80px;
+  height: 80px;
+
+  @include onTablet() {
+    width: 100px;
+    height: 100px;
+  }
+
+  @include onDesktop() {
+    width: 138px;
+    height: 138px;
+  }
+}
+
+@mixin FontStyles($size: 14px, $weight: 400) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color-black
+}
+
+@mixin ContentPaddingInline() {
+  padding-inline: 50px;
+}

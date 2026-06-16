@@ -1,0 +1,94 @@
+@use '@/shared/styles/main.scss' as *;
+
+.feed-item {
+  background-color: $color-primary;
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+  box-shadow: $shadow-grey 0px 2px 8px 0px;
+
+  @include onTablet {
+    padding-right: 30px;
+  }
+
+  &--grid {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0;
+    width: 203px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-block: 8px;
+    padding-right: 8px;
+
+    @include onTablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 25px;
+      column-gap: 10px;
+      width: auto;
+      padding: 12px 12px 18px 12px;
+    }
+  }
+
+  &__img-wrapper {
+    display: flex;
+
+    @include onTablet {
+      margin-right: 30px;
+    }
+
+    &--grid {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+
+    &--grid {
+      width: 100%;
+    }
+
+    @include onTablet {
+      width: 100%;
+    }
+  }
+
+  &__dateInfo {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/-1;
+    gap: 8px;
+    justify-content: flex-end;
+
+    @include onTablet {
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+
+    &--grid {
+      grid-column: 1/-1;
+      flex-direction: row;
+      justify-content: space-between
+    }
+
+    &-text {
+      @include FontStyles();
+    }
+  }
+}

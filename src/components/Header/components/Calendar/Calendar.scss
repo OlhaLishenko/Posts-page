@@ -1,0 +1,183 @@
+@use '@/shared/styles/main.scss' as *;
+
+.date-filter {
+  display: flex;
+  flex-direction: row;
+  gap: 11px;
+
+  @include onDesktop {
+    align-items: center;
+  }
+
+  &__title {
+    @include FontStyles($weight: 400);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include onDesktop {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+
+  &__picker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 162px;
+    flex-shrink: 0;
+    gap: 4px;
+  }
+
+  &__clear {
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: $dp-icon;
+    font-size: 18px;
+    line-height: 1;
+    flex-shrink: 0;
+    right: 38px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-left: 1px solid #DEDEDE;
+
+    &:hover {
+      color: $dp-icon-hover;
+    }
+  }
+}
+
+.react-datepicker {
+  border: 1px solid $dp-border;
+  border-radius: 4px;
+  box-shadow: 0 6px 20px $shadow-black-soft;
+  font-family: inherit;
+
+  &__triangle {
+    display: none;
+  }
+
+  &__header {
+    background: #fff;
+    border-bottom: none;
+    padding-top: 12px;
+  }
+
+  &__current-month {
+    color: $dp-text;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  &__day-name {
+    color: $dp-text;
+    font-weight: 600;
+    width: 2.1rem;
+  }
+
+  &__day {
+    color: $dp-text;
+    width: 2.1rem;
+    line-height: 2.1rem;
+    margin: 2px;
+    border-radius: 4px;
+
+    &:hover {
+      background: $dp-day-hover-bg;
+    }
+
+    &--outside-month {
+      color: $dp-muted;
+    }
+
+    &--selected {
+      background: $dp-blue;
+      color: #fff;
+
+      &:hover {
+        background: $dp-blue;
+      }
+    }
+
+    &--keyboard-selected {
+      background: transparent;
+      color: $dp-text;
+    }
+  }
+
+  &__input-container {
+    display: flex;
+    align-items: center;
+    width: 162px;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  &__input-container input {
+    border: 1px solid $dp-input-border;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: $dp-text;
+    width: 100%;
+    padding: 8px 12px;
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $dp-placeholder;
+    }
+  }
+
+  &__close-icon {
+    position: static;
+    order: 2;
+    padding: 0 4px;
+
+    &::after {
+      background: transparent;
+      color: #6b6b6b;
+      font-size: 18px;
+    }
+  }
+
+  &__calendar-icon {
+    position: static;
+    order: 3;
+    padding: 0 4px;
+    fill: #6b6b6b;
+    flex-shrink: 0;
+    right: 0;
+    border-left: 1px solid $dp-divider;
+  }
+
+  &__view-calendar-icon input {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+.dp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+
+  button {
+    border: none;
+    background: none;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    color: $dp-text;
+  }
+}
