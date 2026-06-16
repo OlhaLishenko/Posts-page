@@ -20,6 +20,10 @@
 - **BEM methodology**
 - **React Date Picker**
 
+## ✏️ Design Reference
+
+> [Figma template](https://www.figma.com/design/HnTUWG34kVP3Oj58OMTuel/Markup-test--Copy-?node-id=0-1&p=f&t=Vi4iQ5QCu66Ulyl4-0)
+
 ## **📦 Getting Started**
 
 To get a local copy of this project up and running, follow these steps.
