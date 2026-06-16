@@ -8,10 +8,6 @@
 <h2> ------- Posts page -------- </h2>
 </div>
 
-## 📃 Project description
-
-One-page responsive landing for the NAMU Art Museum built with HTML, SCSS, and JavaScript.
-
 ## 👉 Live Demo
 
 > Open [https://olhalishenko.github.io/Posts-page/](https://olhalishenko.github.io/Posts-page/) to view the app in your browser.
