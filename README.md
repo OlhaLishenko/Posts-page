@@ -14,7 +14,7 @@ One-page responsive landing for the NAMU Art Museum built with HTML, SCSS, and J
 
 ## 👉 Live Demo
 
-> Open [https://olhalishenko.github.io/Posts_page/](https://olhalishenko.github.io/Posts_page/) to view the app in your browser.
+> Open [https://olhalishenko.github.io/Posts-page/](https://olhalishenko.github.io/Posts-page/) to view the app in your browser.
 
 ## 👩‍💻 Technologies Used
 
